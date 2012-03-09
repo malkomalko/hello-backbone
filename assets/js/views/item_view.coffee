@@ -2,6 +2,8 @@
 
 Views.ItemView = class ItemView extends Backbone.View
 
+  tagName: 'li'
+
   initialize: ->
     _.bindAll @
     @model.bind 'change', @render
@@ -14,8 +16,6 @@ Views.ItemView = class ItemView extends Backbone.View
       <span class="delete label label-important">delete</span>
     """
     @
-
-  tagName: 'li'
 
   events:
     'click .swap': 'swap'

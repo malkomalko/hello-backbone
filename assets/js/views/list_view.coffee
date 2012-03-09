@@ -2,6 +2,8 @@
 
 Views.ListView = class ListView extends Backbone.View
 
+  el: $('#app')
+
   initialize: ->
     _.bindAll @
     @counter = 0
@@ -14,8 +16,6 @@ Views.ListView = class ListView extends Backbone.View
     @$el.append '<a class="btn btn-large btn-primary" id="add">Add List Item</a>'
     @$el.append '<ul></ul>'
     @collection.each (item) => @appendItem(item)
-
-  el: $('#app')
 
   events:
     'click a#add': 'addItem'
