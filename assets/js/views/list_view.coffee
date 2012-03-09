@@ -1,11 +1,20 @@
 window.App.Views.ListView =
 class ListView extends Backbone.View
 
-  el: $('body')
-
   initialize: ->
     _.bindAll @
+    @counter = 0
     @render()
 
   render: ->
-    @$el.append '<ul><li>Hello, Backbone!</li></ul>'
+    @$el.append '<button id="add">Add List Item</button>'
+    @$el.append '<ul></ul>'
+
+  el: $('.container')
+
+  events:
+    'click button#add': 'addItem'
+
+  addItem: ->
+    @counter++
+    $('ul', @el).append "<li>Hello, Backbone #{@counter}!</li>"
