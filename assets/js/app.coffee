@@ -9,6 +9,8 @@
 #= require_tree routes
 #= require_tree views
 
+{ Collections, Models, Routes, Views } = App
+
 jQuery ->
 
-   list_view = new window.App.Views.ListView
+   list_view = new Views.ListView
