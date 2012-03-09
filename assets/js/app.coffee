@@ -13,4 +13,7 @@
 
 jQuery ->
 
-   list_view = new Views.ListView
+  Backbone.sync = (method, model, success, error) ->
+    success()
+
+  list_view = new Views.ListView
