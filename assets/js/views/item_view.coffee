@@ -28,4 +28,4 @@ Views.ItemView = class ItemView extends Backbone.View
       part1: @model.get 'part2'
       part2: @model.get 'part1'
 
-  unrender: => @$el.remove()
+  unrender: -> @$el.remove()
