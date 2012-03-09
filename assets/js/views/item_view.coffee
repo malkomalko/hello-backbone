@@ -11,7 +11,7 @@ Views.ItemView = class ItemView extends Backbone.View
 
   render: ->
     @$el.html """
-      <span>#{@model.get 'part1'} #{@model.get 'part2'}!</span>
+      <span class="item">#{@model.get 'part1'} #{@model.get 'part2'}!</span>
       <span class="swap label label-info">swap</span>
       <span class="delete label label-important">delete</span>
     """
