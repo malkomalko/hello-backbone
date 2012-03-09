@@ -3,6 +3,7 @@
 #= require libs/json2.js
 #= require libs/underscore-min.js
 #= require libs/backbone-min.js
+#= require libs/bootstrap.min.js
 #= require_tree models
 #= require_tree collections
 #= require_tree routes

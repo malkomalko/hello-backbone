@@ -8,4 +8,4 @@ class ListView extends Backbone.View
     @render()
 
   render: ->
-    $(@el).append '<ul><li>Hello, Backbone!</li></ul>'
+    @$el.append '<ul><li>Hello, Backbone!</li></ul>'

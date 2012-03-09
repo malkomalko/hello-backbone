@@ -3,16 +3,16 @@
     src: url("iconic_stroke.eot");
     src: local('IconicStroke'),
        url("iconic_stroke.svg#iconic") format('svg'),
-	   url("iconic_stroke.otf") format('opentype');
+     url("iconic_stroke.otf") format('opentype');
 }
 
 .iconic {
-	color:inherit;
-	font-family: "IconicStroke";
+  color:inherit;
+  font-family: "IconicStroke";
 }
 
 a.iconic:hover {
-	color:inherit;
+  color:inherit;
 }
 
 .iconic.home:before { content: '!'; }

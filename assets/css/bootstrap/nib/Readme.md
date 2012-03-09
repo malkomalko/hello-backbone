@@ -9,8 +9,8 @@ $ npm install nib
 ```
 
  If the image generation features of Nib are desired, such as generating the linear gradient images, install [node-canvas](http://github.com/learnboost/node-canvas):
- 
-```bash 
+
+```bash
 $ npm install canvas
 ```
 
@@ -27,13 +27,13 @@ var server = connect();
 
 function compile(str, path) {
   return stylus(str)
-	.set('filename', path)
-	.set('compress', true)
-	.use(nib());
+  .set('filename', path)
+  .set('compress', true)
+  .use(nib());
 }
 
 server.use(stylus.middleware({
-	src: __dirname
+  src: __dirname
   , compile: compile
 }));
 ```
@@ -45,14 +45,14 @@ server.use(stylus.middleware({
   ```css
   @import 'nib'
   ```
-  
+
   Or you may also pick and choose based on the directory structure in `./lib`, for example:
-  
+
   ```css
   @import 'nib/gradients'
   @import 'nib/overflow'
   ```
-  
+
 to be continued....
 
 ## More Information
@@ -62,23 +62,23 @@ to be continued....
 ## Testing
 
  You will first need to install the dependencies:
- 
+
  ```bash
     $ npm install -d
  ```
- 
+
  Run the automated test cases:
- 
+
  ```bash
     $ make test
  ```
- 
+
  For visual testing run the test server:
- 
+
  ```bash
     $ make test-server
  ```
- 
+
  Then visit `localhost:3000` in your browser.
 
 ## Contributors
@@ -86,7 +86,7 @@ to be continued....
   - TJ Holowaychuk
   - Isaac Johnston
 
-## License 
+## License
 
 (The MIT License)
 
