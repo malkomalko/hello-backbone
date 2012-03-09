@@ -6,4 +6,3 @@ Routes.Application = class Application extends Backbone.Router
     "*actions": "default"
 
   default: (actions) ->
-    console.log "Hello default router w/ actions: #{actions}"
