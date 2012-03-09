@@ -6,8 +6,8 @@ Views.ItemView = class ItemView extends Backbone.View
 
   initialize: ->
     _.bindAll @
-    @model.bind 'change', @render
-    @model.bind 'remove', @unrender
+    @model.on 'change', @render
+    @model.on 'remove', @unrender
 
   render: ->
     @$el.html """
