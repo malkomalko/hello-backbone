@@ -1,0 +1,1 @@
+window.JST = window.JST || {}; window.JST.sub_message = new Hogan.Template(function(c,p,i){i = i || "";var b = i + "";var _ = this;b += "<h3>& hello Coffeescript from ";b += (_.v(_.f("name",c,p,0)));b += "</h3>";b += "\n" + i;b += "<hr/>";return b;;});

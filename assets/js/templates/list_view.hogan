@@ -1,2 +1,3 @@
+{{> sub_message}}
 <a class="btn btn-large btn-primary" id="add">Add List Item</a>
 <ul></ul>

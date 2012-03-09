@@ -13,7 +13,10 @@ Views.ListView = class ListView extends Backbone.View
     @collection.fetch()
     @render()
 
-  render: -> @$el.html JST['list_view'].render({})
+  render: ->
+    context  = {name: 'malkomalko'}
+    partials = {sub_message: JST['sub_message']}
+    @$el.html JST['list_view'].render(context, partials)
 
   events:
     'click a#add': 'addItem'
