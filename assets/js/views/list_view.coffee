@@ -4,16 +4,16 @@ Views.ListView = class ListView extends Backbone.View
 
   initialize: ->
     _.bindAll @
-
+    @counter = 0
     @collection = new Collections.List
     @collection.on 'add', @appendItem
-
-    @counter = 0
+    _(5).times => @addItem()
     @render()
 
   render: ->
     @$el.append '<button id="add">Add List Item</button>'
     @$el.append '<ul></ul>'
+    @collection.each (item) => @appendItem(item)
 
   el: $('.container')
 
