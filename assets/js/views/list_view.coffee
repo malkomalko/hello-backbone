@@ -9,13 +9,11 @@ Views.ListView = class ListView extends Backbone.View
     @counter = 0
     @collection = new Collections.List
     @collection.on 'add', @appendItem
-    _(5).times => @addItem()
+    @collection.on 'reset', @appendItems
+    @collection.fetch()
     @render()
 
-  render: ->
-    @$el.append '<a class="btn btn-large btn-primary" id="add">Add List Item</a>'
-    @$el.append '<ul></ul>'
-    @collection.each (item) => @appendItem(item)
+  render: -> @$el.html JST['list_view'].render({})
 
   events:
     'click a#add': 'addItem'
@@ -29,3 +27,7 @@ Views.ListView = class ListView extends Backbone.View
   appendItem: (item) ->
     item_view = new Views.ItemView model: item
     $('ul', @el).append item_view.render().el
+
+  appendItems: (collection) ->
+    @collection.each (item) => @appendItem(item)
+    @counter += @collection.length

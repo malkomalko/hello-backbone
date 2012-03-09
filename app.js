@@ -2,11 +2,21 @@
  * Module dependencies.
  */
 
-var express = require('express');
+var fs = require('fs')
+  , path = require('path')
+  , express = require('express')
+  , app = module.exports = express.createServer()
+  , mongoose = app.mongoose = require('mongoose');
 
-var app = module.exports = express.createServer();
+/**
+ * Globals.
+ */
 
-// Configuration
+global.inspect = require('eyes').inspector({ maxLength: 100000 });
+
+/**
+ * Configuration.
+ */
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -26,10 +36,33 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-// Routes
+mongoose.connect('mongodb://localhost/hello-backbone');
 
-app.get('/', function(req, res) {
-  res.render('index');
+/**
+ * Models.
+ */
+
+fs.readdirSync(__dirname + '/lib/models').map(function(file) {
+  var model = path.basename(file, '.js');
+  if (path.extname(file) !== '') {
+    global[model] = require(__dirname + '/lib/models/' + model);
+  }
 });
+
+
+/**
+ * Routes.
+ */
+
+fs.readdirSync(__dirname + '/lib/routes').map(function(file) {
+  var route = path.basename(file, '.js');
+  if (path.extname(file) !== '') {
+    require(__dirname + '/lib/routes/' + route);
+  }
+});
+
+/**
+ * Start server.
+ */
 
 app.listen(10000);

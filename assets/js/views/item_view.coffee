@@ -10,11 +10,7 @@ Views.ItemView = class ItemView extends Backbone.View
     @model.on 'remove', @unrender
 
   render: ->
-    @$el.html """
-      <span class="item">#{@model.get 'part1'} #{@model.get 'part2'}!</span>
-      <span class="swap label label-info">swap</span>
-      <span class="delete label label-important">delete</span>
-    """
+    @$el.html JST['item_view'].render(@model.toJSON())
     @
 
   events:
