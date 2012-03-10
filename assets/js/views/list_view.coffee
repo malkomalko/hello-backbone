@@ -15,7 +15,7 @@ Views.ListView = class ListView extends Backbone.View
 
   render: ->
     context  = {name: 'malkomalko'}
-    partials = {sub_message: JST['sub_message']}
+    partials = {sub_message: JST['static/sub_message']}
     @$el.html JST['list_view'].render(context, partials)
 
   events:
