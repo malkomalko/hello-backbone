@@ -4,11 +4,11 @@ routes = require 'routes/site'
 
 describe 'site routes', ->
 
+  [req, res] = [{}, {}]
+
   describe 'index', ->
 
     it 'renders the index template', ->
-      req = null
-      res =
-        render: (view) ->
-          expect(view).to.equal 'index'
+      res.render = (view) ->
+        expect(view).to.equal 'index'
       routes.index(req, res)
