@@ -112,11 +112,11 @@ body {
   background-color: #fff;
 }
 a {
-  color: #08c;
+  color: #cdcdcd;
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
+  color: #a7a7a7;
   text-decoration: underline;
 }
 .row {
@@ -1261,7 +1261,7 @@ table .span12 {
   height: 14px;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("/images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
   *margin-right: 0.3em;
@@ -1271,7 +1271,7 @@ table .span12 {
   *margin-left: 0;
 }
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("/images/glyphicons-halflings-white.png");
 }
 .icon-glass {
   background-position: 0 0;
@@ -1725,7 +1725,7 @@ table .span12 {
 .dropdown-menu .active > a:hover {
   color: #fff;
   text-decoration: none;
-  background-color: #08c;
+  background-color: #cdcdcd;
 }
 .dropdown.open {
   *z-index: 1000;
@@ -1943,16 +1943,16 @@ table .span12 {
   color: rgba(255,255,255,0.75);
 }
 .btn-primary {
-  background-color: #006dcc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #08c), color-stop(1, #04c));
-  background-image: -webkit-linear-gradient(top, #08c 0%, #04c 100%);
-  background-image: -moz-linear-gradient(top, #08c 0%, #04c 100%);
-  background-image: -ms-linear-gradient(top, #08c 0%, #04c 100%);
-  background-image: -o-linear-gradient(top, #08c 0%, #04c 100%);
-  background-image: linear-gradient(top, #08c 0%, #04c 100%);
+  background-color: #cdcdcd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cdcdcd), color-stop(1, #cdcdcd));
+  background-image: -webkit-linear-gradient(top, #cdcdcd 0%, #cdcdcd 100%);
+  background-image: -moz-linear-gradient(top, #cdcdcd 0%, #cdcdcd 100%);
+  background-image: -ms-linear-gradient(top, #cdcdcd 0%, #cdcdcd 100%);
+  background-image: -o-linear-gradient(top, #cdcdcd 0%, #cdcdcd 100%);
+  background-image: linear-gradient(top, #cdcdcd 0%, #cdcdcd 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='#04c', GradientType=0);
-  border-color: #04c #04c #002a80;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdcdcd', endColorstr='#cdcdcd', GradientType=0);
+  border-color: #cdcdcd #cdcdcd #a7a7a7;
   border-color: rgba(0,0,0,0.10) rgba(0,0,0,0.10) rgba(0,0,0,0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
@@ -1961,11 +1961,11 @@ table .span12 {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #04c;
+  background-color: #cdcdcd;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #039 \9;
+  background-color: #b3b3b3 \9;
 }
 .btn-warning {
   background-color: #faa732;
@@ -2344,7 +2344,7 @@ input[type="submit"].btn.small {
 .nav-list .active > a:hover {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.20);
-  background-color: #08c;
+  background-color: #cdcdcd;
 }
 .nav-list [class^="icon-"] {
   margin-right: 2px;
@@ -2412,7 +2412,7 @@ input[type="submit"].btn.small {
 .nav-pills .active > a,
 .nav-pills .active > a:hover {
   color: #fff;
-  background-color: #08c;
+  background-color: #cdcdcd;
 }
 .nav-stacked > li {
   float: none;
@@ -2461,12 +2461,12 @@ input[type="submit"].btn.small {
 }
 .nav-tabs .dropdown-toggle .caret,
 .nav-pills .dropdown-toggle .caret {
-  border-top-color: #08c;
+  border-top-color: #cdcdcd;
   margin-top: 6px;
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
-  border-top-color: #005580;
+  border-top-color: #a7a7a7;
 }
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
@@ -3326,7 +3326,7 @@ input[type="submit"].btn.small {
   box-shadow: 0 1px 1px rgba(0,0,0,0.07);
 }
 a.thumbnail:hover {
-  border-color: #08c;
+  border-color: #cdcdcd;
   -webkit-box-shadow: 0 1px 4px rgba(0,105,214,0.25);
   -moz-box-shadow: 0 1px 4px rgba(0,105,214,0.25);
   box-shadow: 0 1px 4px rgba(0,105,214,0.25);

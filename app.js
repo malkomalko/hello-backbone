@@ -24,7 +24,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(require('connect-assets')({build: false}));
+  app.use(require('connect-assets')());
   app.use(express.static(__dirname + '/public'));
 });
 

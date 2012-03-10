@@ -1,1 +1,1 @@
-window.JST = window.JST || {}; window.JST["static/sub_message"] = new Hogan.Template(function(c,p,i){i = i || "";var b = i + "";var _ = this;b += "<h3>& hello Coffeescript from ";b += (_.v(_.f("name",c,p,0)));b += "</h3>";b += "\n" + i;b += "<hr/>";return b;;});
+window.JST = window.JST || {}; window.JST["static/sub_message"] = new Hogan.Template(function(c,p,i){i = i || "";var b = i + "";var _ = this;b += "<h3>& hello Coffeescript from ";b += (_.v(_.f("name",c,p,0)));b += "</h3>";b += "\n" + i;b += "<div id=\"sunset\"></div>";b += "\n" + i;b += "<hr/>";return b;;});

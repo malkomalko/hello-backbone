@@ -1,3 +1,15 @@
-{{> sub_message}}
-<a class="btn btn-large btn-primary" id="add">Add List Item</a>
-<ul></ul>
+<div class="row">
+  <div class="span12">
+    {{> sub_message}}
+    <div class="row">
+      <div id="content" class="span6">
+        <a class="btn btn-large btn-primary" id="add">
+          <i class="icon-plus-sign"></i>
+          Add List Item
+        </a>
+        <ul></ul>
+      </div>
+      <div id="sidebar" class="span6"></div>
+    </div>
+  </div>
+</div>
