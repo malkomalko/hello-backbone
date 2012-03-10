@@ -1,4 +1,4 @@
-{ Collections, Models, Routes, Views } = App
+{Collections, Models, Routes, Views} = App
 
 Models.Item = class Item extends Backbone.Model
 

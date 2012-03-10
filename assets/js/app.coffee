@@ -12,7 +12,7 @@
 #= require_tree routes
 #= require_tree views
 
-{ Collections, Models, Routes, Views } = App
+{Collections, Models, Routes, Views} = App
 
 jQuery ->
 

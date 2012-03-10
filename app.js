@@ -12,7 +12,7 @@ var fs = require('fs')
  * Globals.
  */
 
-global.inspect = require('eyes').inspector({ maxLength: 100000 });
+global.inspect = require('eyes').inspector({maxLength: 100000});
 
 /**
  * Configuration.
@@ -24,12 +24,12 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(require('connect-assets')({ build: false }));
+  app.use(require('connect-assets')({build: false}));
   app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 });
 
 app.configure('production', function(){
@@ -42,9 +42,9 @@ mongoose.connect('mongodb://localhost/hello-backbone');
  * Models.
  */
 
-fs.readdirSync(__dirname + '/lib/models').map(function(file) {
+fs.readdirSync(__dirname + '/lib/models').map(function(file){
   var model = path.basename(file, '.js');
-  if (path.extname(file) !== '') {
+  if (path.extname(file) !== ''){
     global[model] = require(__dirname + '/lib/models/' + model);
   }
 });
@@ -54,9 +54,9 @@ fs.readdirSync(__dirname + '/lib/models').map(function(file) {
  * Routes.
  */
 
-fs.readdirSync(__dirname + '/lib/routes').map(function(file) {
+fs.readdirSync(__dirname + '/lib/routes').map(function(file){
   var route = path.basename(file, '.js');
-  if (path.extname(file) !== '') {
+  if (path.extname(file) !== ''){
     require(__dirname + '/lib/routes/' + route);
   }
 });

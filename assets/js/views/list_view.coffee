@@ -1,4 +1,4 @@
-{ Collections, Models, Routes, Views } = App
+{Collections, Models, Routes, Views} = App
 
 Views.ListView = class ListView extends Backbone.View
 
