@@ -18,5 +18,3 @@ jQuery ->
 
   App.router = new Routes.Application
   Backbone.history.start pushState: false, root: '/', silent: false
-
-  list_view = new Views.ListView
