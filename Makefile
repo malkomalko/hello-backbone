@@ -1,8 +1,8 @@
 test:
-	@NODE_ENV=test NODE_PATH=lib:spec/server \
+	@NODE_ENV=test NODE_PATH=lib:spec \
 		./node_modules/.bin/mocha \
-		--require ./spec/server/helper \
+		--require ./spec/helper \
 		--reporter list \
-		spec/server/**/*.coffee
+		spec/**/*.coffee
 
 .PHONY: test test-web
