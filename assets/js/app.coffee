@@ -11,6 +11,7 @@
 #= require_tree collections
 #= require_tree routes
 #= require_tree views
+#= require_tree modules
 
 {Collections, Models, Routes, Views} = App
 
