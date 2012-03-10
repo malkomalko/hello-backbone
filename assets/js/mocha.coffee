@@ -6,7 +6,7 @@
 #= require libs/sinon-chai.js
 
 window.chai.use window.sinonChai
-window.chai.expect()
+window.expect = window.chai.expect
 window.mocha.setup 'bdd'
 
 jQuery ->
