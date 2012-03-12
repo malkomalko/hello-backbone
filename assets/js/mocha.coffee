@@ -4,12 +4,16 @@
 #= require libs/chai.js
 #= require libs/sinon.js
 #= require libs/sinon-chai.js
+#= require libs/sinon-mocha.js
 
 window.chai.use window.sinonChai
+window.SinonMocha.enhance window.sinon
 window.expect = window.chai.expect
 window.mocha.setup 'bdd'
 
+window.mocha.Runner.prototype.checkGlobals = ->
+
 jQuery ->
 
-  window.mocha.run().globals(['App'])
+  window.mocha.run()
 
